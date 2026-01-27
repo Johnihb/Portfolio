@@ -42,8 +42,7 @@ const setUpTextHover = (container , type)=>{
       const distance = Math.abs(mouseX - (l -left +  w/2))
       const intensity = Math.exp(-(distance**2)/3000)
     
-      // animateLetter(letter , min + intensity * (max - min) , intensity * duration)
-      animateLetter(letter , min + intensity * (max + +min) )
+      animateLetter(letter , min + intensity * (max - min))
 
     })
   };
@@ -73,8 +72,8 @@ const Welcome = () => {
     const subtitleCleanUp = setUpTextHover(subtitleRef.current , 'subtitle')
 
     return()=>{
-      titleCleanUp()
-      subtitleCleanUp()
+      titleCleanUp?.()
+      subtitleCleanUp?.()
     }
   },[])
 
