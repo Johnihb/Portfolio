@@ -1,4 +1,5 @@
 import { Dock, Navbar, Welcome } from "#components"
+import Finder from "#windows/finder"
 import Resume from "#windows/Resume"
 import Safari from "#windows/Safari"
 import Terminal from "#windows/Terminal"
@@ -19,6 +20,7 @@ const App = () => {
       <Terminal />
       <Safari />
       <Resume />
+      <Finder />
     </main>
   )
 }
