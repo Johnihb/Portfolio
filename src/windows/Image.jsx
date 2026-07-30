@@ -16,8 +16,8 @@ const Image = () => {
         <h2>{data.name}</h2>
       </div>
 
-      <div className="p-4">
-        {data.imageUrl && <img src={data.imageUrl} alt={data.name} className="max-w-full h-auto" />}
+      <div className="flex-1 flex items-center justify-center overflow-hidden p-2">
+        {data.imageUrl && <img src={data.imageUrl} alt={data.name} className="max-w-full max-h-full object-contain" />}
       </div>
     </>
   )
