@@ -119,13 +119,13 @@ const socials = [
     bg: "#f4656b",
     link: "https://github.com/Johnihb",
   },
-// TODO : add more socials
+  // TODO : add more socials
   {
     id: 2,
     text: "LinkedIn",
     icon: "/icons/linkedin.svg",
     bg: "#05b6f6",
-    link: "https://www.linkedin.com/in/amritxtha",  
+    link: "https://www.linkedin.com/in/amritxtha",
   },
 ];
 
@@ -369,7 +369,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: "/images/adrian.jpg",
+      imageUrl: "/images/amrit.jpg",
     },
     {
       id: 2,
@@ -378,16 +378,16 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-28 right-72",
-      imageUrl: "/images/adrian-2.jpg",
+      imageUrl: "/images/amrit-2.jpg",
     },
     {
       id: 3,
-      name: "conference-me.png",
+      name: "friends-me.png",
       icon: "/images/image.png",
       kind: "file",
       fileType: "img",
       position: "top-52 left-80",
-      imageUrl: "/images/adrian-3.jpeg",
+      imageUrl: "/images/amrit-3.jpg",
     },
     {
       id: 4,
@@ -397,12 +397,12 @@ const ABOUT_LOCATION = {
       fileType: "txt",
       position: "top-60 left-5",
       subtitle: "Meet the Developer Behind the Code",
-      image: "/images/adrian.jpg",
+      image: "/images/amrit.jpg",
       description: [
-        "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-        "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
-        "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
-        "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
+        "Hey! I'm Amrit 👋, a web developer who's still Googling 'how to center a div' but somehow building websites that people actually use.",
+        "I work with JavaScript, React, and Next.js—turning caffeine into code and bugs into... slightly different bugs.",
+        "I'm all about making things look clean and feel smooth, even if my Git commit messages tell a messier story.",
+        "When I'm not coding, I'm probably breaking my sleep schedule fixing 'one last thing,' collecting browser tabs like Pokémon, or convincing myself that yes, I *do* need another keyboard.",
       ],
     },
   ],
@@ -465,14 +465,14 @@ export const locations = {
 const INITIAL_Z_INDEX = 1000;
 
 const WINDOW_CONFIG = {
-  finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, isMaximized: false, data: null },
+  contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, isMaximized: false, data: null },
+  resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, isMaximized: false, data: null },
+  safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, isMaximized: false, data: null },
+  photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, isMaximized: false, data: null },
+  terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, isMaximized: false, data: null },
+  txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, isMaximized: false, data: null },
+  imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, isMaximized: false, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };

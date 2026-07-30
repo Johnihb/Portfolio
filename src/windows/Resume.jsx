@@ -26,7 +26,7 @@ const Resume = () => {
 
 
       <Document file="files/resume.pdf" >
-        <Page pageNumber={1} renderTextLayer renderAnnotationLayer/>
+        <Page pageNumber={1} renderTextLayer renderAnnotationLayer />
       </Document>
 
     </>
@@ -34,7 +34,7 @@ const Resume = () => {
 }
 
 
-const ResumeWindow = WindowWrapper(Resume , 'resume')
+const ResumeWindow = WindowWrapper(Resume, 'resume')
 
 
 

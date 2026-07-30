@@ -18,7 +18,6 @@ const Finder = () => {
     if (item.kind === "folder") return setActiveLocation(item)
 
     if (['fig', 'url'].includes(item.fileType) && item.href) {
-      console.log(item.url)
       return window.open(item.href, '_blank')
     }
     openWindow(`${item.fileType}${item.kind}`, item)
@@ -65,7 +64,7 @@ const Finder = () => {
 
         <ul className="content">
           {
-            activeLocation?.children.map((item) => (
+            (activeLocation?.children || []).map((item) => (
               <li key={item.id} className={item.position}
                 onClick={() => openItem(item)}>
                 <img src={item.icon} alt={item.name} />

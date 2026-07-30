@@ -106,11 +106,11 @@ body {
     }
 
     .minimize {
-      @apply size-3.5 rounded-full bg-[#ffc030];
+      @apply size-3.5 rounded-full bg-[#ffc030] cursor-pointer;
     }
 
     .maximize {
-      @apply size-3.5 rounded-full bg-[#2acb42];
+      @apply size-3.5 rounded-full bg-[#2acb42] cursor-pointer;
     }
   }
 
@@ -392,5 +392,88 @@ body {
         }
       }
     }
+  }
+
+  /* Maximized window overrides - must come last to override window-specific styles */
+  .maximized {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999 !important;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    transform: none;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden;
+  }
+
+  .maximized > * {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .maximized #window-header {
+    flex-shrink: 0;
+    @apply px-6 py-4 text-base;
+  }
+
+  .maximized > *:not(#window-header) {
+    flex: 1;
+    overflow: auto;
+  }
+
+  .maximized .icon {
+    @apply size-7;
+  }
+
+  .maximized .search {
+    @apply w-4/5 py-3 px-5 text-lg;
+  }
+
+  .maximized .search input {
+    @apply text-lg;
+  }
+
+  .maximized .blog {
+    @apply max-w-full p-16 overflow-auto;
+  }
+
+  .maximized .blog h2 {
+    @apply text-4xl mb-8;
+  }
+
+  .maximized .blog-post {
+    @apply gap-8;
+  }
+
+  .maximized .blog-post img {
+    @apply h-52;
+  }
+
+  .maximized .content h3 {
+    @apply text-2xl;
+  }
+
+  .maximized .content p,
+  .maximized .content a {
+    @apply text-base;
+  }
+
+  .maximized .techstack {
+    @apply p-12 text-lg overflow-auto;
+  }
+
+  .maximized .techstack .label {
+    @apply text-xl;
+  }
+
+  .maximized .techstack h3 {
+    @apply text-lg;
   }
 }
