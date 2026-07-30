@@ -29,6 +29,8 @@ const WindowWrapper = (Component, windowKey) => {
       if (!el) return
       el.style.display = isOpen ? 'block' : 'none';
 
+      if (isMaximized) return
+
       gsap.fromTo(el, {
         scale: 0.7,
         opacity: 0,
@@ -43,7 +45,7 @@ const WindowWrapper = (Component, windowKey) => {
         }
       )
 
-    }, [isOpen])
+    }, [isOpen, isMaximized])
 
     return <section id={windowKey} ref={ref} style={{ zIndex }} className={`absolute ${isMaximized ? 'maximized' : ''}`}>
       <Component {...props} />
